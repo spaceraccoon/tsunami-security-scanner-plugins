@@ -96,8 +96,6 @@ public final class NmapPortScanner implements PortScanner {
               .treatAllHostsAsOnline()
               .withScanTechnique(ScanTechnique.CONNECT)
               .asUnprivileged()
-              .withServiceAndVersionDetection()
-              .withVersionDetectionIntensity(5)
               .withScript("banner")
               .withTimingTemplate(TimingTemplate.AGGRESSIVE)
               .withTargetNetworkEndpoint(scanTarget.getNetworkEndpoint())
